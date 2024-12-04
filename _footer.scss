@@ -1,0 +1,123 @@
+@use 'breakpoints';
+
+
+footer {
+    background-color: rgb(240,220,197);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-wrapper {
+    padding: 40px 60px 40px 32px;
+    @include breakpoints.lg {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @include breakpoints.xl {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 97px 120px;
+    }
+    p {
+        color: rgb(79,79,79);
+        font-size: 14px;
+    }
+}
+
+
+
+.lists {
+    display: flex;
+    padding-top: 40px;
+    @include breakpoints.xl {
+        padding-top: 0;
+    }
+    .company-list {
+        ul {
+            @include breakpoints.xl {
+                margin-top: 0;
+            }
+            @include breakpoints.xxl {
+                margin-right: 50px;
+            }
+            padding-left: 0;
+            li {
+                list-style: none;
+            }
+        }
+    }
+    .support-list {
+        ul {
+            @include breakpoints.xl {
+                margin-top: 0;
+            }
+            li {
+                list-style: none;
+            }
+        }
+    }
+}
+ul :nth-child(1) {
+    padding-bottom: 24px;
+    color: rgb(100,123,100);
+    font-size: 20px;
+}
+ul :not(:nth-child(1)) {
+    padding-bottom: 12px;
+    font-size: 14px;
+    color: rgb(51,51,51);
+}
+
+
+
+.message-section {
+    .message-name {
+        padding-bottom: 13px;
+        color: rgb(100,123,100);
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    input {
+        display: block;
+        padding: 12px 144px 77px 24px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        .green-button {
+            background-image: linear-gradient( to right,rgb(100,123,100), rgb(102,172,102));
+            padding: 13px 22px 15px;
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 2px;
+            width: 320px;
+            .button-text {
+                font-size: 10px;
+                align-self: end;
+            }
+            .arrow-image {
+                img {
+                    
+                }
+            }
+        }
+    }
+}
+.copyright-line {
+    color: rgb(79,79,79);
+    font-size: 14px;
+}
+.rights-line {
+    padding-top: 8px;
+    padding-bottom: 19px;
+    color: rgb(79,79,79);
+    font-size: 14px;
+}
+
+.media-icons {
+    img {
+        padding-right: 13px;
+        width: 45px;
+    }
+}

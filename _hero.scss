@@ -1,0 +1,105 @@
+@use 'breakpoints';
+
+.hero {
+    .hero-wrapper::before {
+        content: "";
+        display: block;
+        background-image: url(images/Ellipse\ 116.svg);
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin: -27px 58px;
+        @include breakpoints.lg {
+            margin: 72px 110px;
+        }
+        @include breakpoints.xl {
+            margin: 70px 209px;
+        }
+    }
+    .hero-wrapper {
+        padding-left: 32px;
+        padding-right: 98px;
+        padding-bottom: 90px;
+        padding-top: 21px;
+        @include breakpoints.md {
+            display: flex;
+        }
+        @include breakpoints.lg {
+            max-width: 1100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .section-info {
+            font-family: Arial, Helvetica, sans-serif;
+            @include breakpoints.lg {
+                margin-right: 150px;
+                margin-left: 50px;
+                margin-top: 100px;
+            }
+            @include breakpoints.xl {
+                margin-right: 250px;
+                margin-left: 150px;
+            }
+            .info-name {
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 10px;
+                margin: 12px 0 0 0;
+                color: rgb(79,79,79);
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                font-size: 10px;
+                .green-button {
+                    background-image: linear-gradient( to right,rgb(100,123,100), rgb(102,172,102));
+                    padding: 13px 13px 15px;
+                    margin-top: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 175px;
+                    border-radius: 2px;
+                    .button-text {
+                        font-size: 10px;
+                        align-self: end;
+                    }
+                    .arrow-image {
+                        img {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hero-wrapper::after {
+        content: "";
+        display: none;
+        background-image: url(images/Ellipse\ 119.svg);
+        width: 132px;
+        height: 132px;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin: 218px -33px;
+        @include breakpoints.lg {
+            display: block;
+        }
+    }
+}
+.player-image {
+    position: absolute;
+    top: 99px;
+    right: -78px;
+    @include breakpoints.md {
+        position: static;
+    }
+    @include breakpoints.lg {
+        img {
+        
+        }
+    }
+}

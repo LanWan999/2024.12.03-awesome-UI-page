@@ -1,0 +1,148 @@
+@use 'breakpoints';
+
+
+.insurance-section {
+    padding-left: 46px;
+    padding-bottom: 72px;
+    font-family: Arial, Helvetica, sans-serif;
+    .insurance-section-wrapper {
+        @include breakpoints.lg {
+            max-width: 1100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .section-preface {
+            color: rgb(243,181,98);
+            text-transform: uppercase;
+            font-size: 13px;
+            text-align: center;
+        }
+        .info-name {
+            font-size: 20px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: 16px;
+            color: rgb(100,123,100);
+        }
+        .insurance-types {
+            display: flex;
+            justify-content: center;
+            column-gap: 17px;
+            @include breakpoints.lg {
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+            @include breakpoints.xl {
+                margin-right: 150px;
+                margin-left: 150px;
+            }
+            .trip-type-medical::before {
+                content: '';
+                background-image: url(images/Dots\ 8px.1.svg);
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 250px;
+                height: 200px;
+                margin: 30px -38px;
+                z-index: -1;
+            }
+            .trip-type-medical {
+                padding: 34px 21px 31px 21px;
+                background-image: linear-gradient(rgb(255, 255, 255), rgba(221, 221, 221));
+                border-radius: 2px;
+                width: 400px;
+                @include breakpoints.md {
+                    max-width: 400px;
+                }
+                .medical {
+                    img {
+
+                    }
+                }
+                .trip-name {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    span {
+                        font-size: 8px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    font-size: 8px;
+                }
+            }
+            .trip-type-monetary {
+                padding: 34px 21px 31px 21px;
+                background-color: rgb(100,123,100);
+                border-radius: 2px;
+                color: white;
+                margin-right: 47px;
+                width: 400px;
+                @include breakpoints.md {
+                    margin-right: 0;
+                    max-width: 400px;
+                }
+                .monetary {
+                    img {
+
+                    }
+                }
+                .trip-name {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    span {
+                        font-size: 8px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    font-size: 8px;
+                }
+            }
+            .trip-type-crisis {
+                display: none;
+                padding: 34px 21px 31px 21px;
+                background-image: linear-gradient(rgb(255, 255, 255), rgba(221, 221, 221));
+                border-radius: 2px;
+                margin-right: 47px;
+                width: 400px;
+                @include breakpoints.md {
+                    display: block;
+                    max-width: 400px;
+                }
+                .crisis {
+                    img {
+                        width: 29px;
+                        height: 28px;
+                    }
+                }
+                .trip-name {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    span {
+                        font-size: 8px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    font-size: 8px;
+                }
+            }
+
+        }
+    }
+}
+@include breakpoints.xl {
+    .trip-type-crisis::after {
+        content: '';
+        background-image: url(images/Rectangle\ 497.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        margin: -35px 80px;
+        z-index: -1;
+    }
+}
